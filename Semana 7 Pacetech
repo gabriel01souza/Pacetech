@@ -1,0 +1,88 @@
+
+package ConversaoTemperatura;
+import java.util.Scanner;
+
+public class Main {
+
+
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args) {
+      Scanner ler = new Scanner(System.in);
+      int menu = 1;
+      // TEMPERATURAS
+      int temperatura;
+      //CElSIUS
+     float celsius;
+     float celsiusConvertido; 
+   //FAHRENHEIT
+     float fahrenheit;
+     float fahrenheitConvertido;
+     
+      //MOEDA
+      int moeda;
+      float cotacaoDolar;
+      //REAL
+      float real;
+      float realConvertido;
+      //DOLLAR
+      float dolar;
+      float dolarConvertido;
+      
+      while(menu == 1 || menu == 2){
+        
+        System.out.println("(1) - Voce deseja converter a temperatura?");
+        System.out.println("(2) - Voce deseja converter moedas?");
+        System.out.println("(3) - Estou bem, nao preciso de conversao!");
+        menu = ler.nextInt();
+        
+        if(menu == 1) {
+            System.out.println("Voce deseja converter (1)Celsius"
+                    + " ou (2)Fahrenheit?");
+            temperatura = ler.nextInt();
+                if(temperatura == 1) {
+                   System.out.println("Qual a temperatura local?");
+                    celsius = ler.nextFloat();
+                    celsiusConvertido = (float) ((celsius * 1.8)+32) ;
+                    System.out.println("A temperatura em fahrenheit e: "
+                            + celsiusConvertido);
+                } else {
+                    System.out.println("Qual a temperatura"
+                            + "local em fahrenheit?");
+                    fahrenheit = ler.nextFloat();
+                    fahrenheitConvertido = (float) ((fahrenheit - 32)* 0.555555);
+                    System.out.println("A temperatura em celsius e: "
+                            + fahrenheitConvertido);
+                    
+                    
+                }                 
+        }else{
+            if(menu == 2){
+                System.out.println("Informe a cotacao do Dolar:");
+                cotacaoDolar = ler.nextFloat();
+                System.out.println("Voce deseja converter (1)real ou (2)dolar?");
+                moeda = ler.nextInt();
+                    if (moeda == 1) {
+                        System.out.println("Informe o valor total em real:");
+                        real = ler.nextFloat();
+                        realConvertido = (float) (real / cotacaoDolar);
+                        System.out.println("Voce transformou " + real + " em " 
+                                + realConvertido);
+                } else {
+                        System.out.println("Informe o valor total em dolar:");
+                        dolar = ler.nextFloat();
+                        dolarConvertido = (float) (dolar / cotacaoDolar);
+                        System.out.println("Voce transformou " + dolar + " em "
+                                + dolarConvertido);
+                    }
+            } else {
+               System.out.println("Obrigado pela preferencia e boa viagem! <3");
+                
+            }
+        }
+    }
+    }
+}
+    
+
+    
+
