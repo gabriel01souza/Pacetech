@@ -1,0 +1,71 @@
+
+package ProjetoFinal;
+
+public class EmpregadosFixos {
+
+   
+    private String nome;
+    private String sobrenome;
+    private float salario;
+    private float aumento = 0.10f;
+    private float salarioAnual;
+    private float salarioAnualAjustado;
+    private float salarioAjustado;
+    
+    public EmpregadosFixos(String nome, String sobrenome, float salario){
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        
+        if(salario < 0){
+             salario = 0;
+         }else{
+             this.salario = salario;
+         }
+    }
+    
+    public float calcularAumento(){
+        return salarioAjustado = salario + (salario * 0.10f); 
+    }
+     public void  setNome(){
+     
+     }
+     public String getNome(){
+         return nome;
+     }
+     public void setSobrenome(){
+     
+     }
+     public String getSobrenome(){
+         return sobrenome;
+     }
+     public void setSalario(float salario){
+         
+     }
+     public float getSalario(){
+         return salario;
+     }
+     public void setAumento(){
+         
+     }
+     public float getAumento(){
+         return aumento;
+     }
+     public void setSalarioAnual(){
+         
+     }
+    public float getSalarioAnual(){
+        return salarioAnual = salario * 12;
+    }
+     public void setSalarioAjustado(){
+     
+     }
+     public float getSalarioAjustado(){
+         return salarioAjustado;
+     }
+     public void setSalarioAnualAjustado(){
+         
+     }
+     public float getSalarioAnualAjustado(){
+        return salarioAnualAjustado = salarioAjustado * 12;
+     }
+}
